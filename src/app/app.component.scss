@@ -1,0 +1,45 @@
+:host {
+  .time {
+    width: 800px;
+    height: 300px;
+    background-color: #fdfdfe;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 60px;
+      margin: 0;
+      width: 250px;
+    }
+
+    button {
+      width: 50px;
+      height: 25px;
+      background-color: #4bff2f;
+      border: 0;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .time__button-pause {
+      background-color: #ffea00;
+    }
+  }
+
+  .lap {
+    width: 800px;
+    background-color: #fdfdfe;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      li {
+        margin: 10px;
+        font-size: 25px;
+      }
+    }
+  }
+}

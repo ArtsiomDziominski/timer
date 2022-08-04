@@ -1,8 +1,15 @@
-<p>{{hour<10 ? '0' + hour : hour}}:{{min<10 ? '0' + min : min}}:{{sec<10 ? '0' + sec : sec}}:{{ms}}</p>
-<button (click)="startStop()">{{isToggleStart ? 'Pause' : 'Start'}}</button>
-<button (click)="lap()">Lap</button>
-<button>Reset</button>
+<div class="header"></div>
 
-<ul *ngFor="let lap of lapRecord">
-  <li>{{lap}}</li>
-</ul>
+<div class="time">
+  <div>
+    <p>{{hour < 10 ? '0' + hour : hour}}:{{min < 10 ? '0' + min : min}}:{{sec < 10 ? '0' + sec : sec}}:{{ms < 10 ? '0' + ms : ms}}</p>
+    <button [class.time__button-pause]="isToggleStart" (click)="startStop()">{{isToggleStart ? 'Pause' : 'Start'}}</button>
+    <button (click)="lap()">Lap</button>
+    <button (click)="reset()">Reset</button>
+  </div>
+</div>
+<div class="lap">
+  <ul>
+    <li *ngFor="let lap of lapRecord">{{lap}}</li>
+  </ul>
+</div>
